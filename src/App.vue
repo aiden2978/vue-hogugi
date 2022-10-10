@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Book msg="Welcome to Your Vue.js App" />
+    <Book></Book>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ export default {
   components: {
     HelloWorld,
     Signup,
+    Book,
   },
 };
 </script>
