@@ -1,25 +1,41 @@
 <template>
-  <header>
-    <div class="logo">
-      <img
-        src="https://github.com/osamhack2022/WEB_HOGUGI_MARCH/blob/fff80fe8dd58c3dab4cd8bacaaf0f637c1c69029/HOGUGI_LOGO.png?raw=true"
-        style="width: 200px; display: block; margin: 0 auto"
-      />
-      <h3>영내 체육시설 예약 플랫폼</h3>
+  <div class="black_bg" v-if="modalOpen == true">
+    <div class="white_bg">
+      <p>A 풋살장 16시 예약하기</p>
+      <p>대표자 관등성명</p>
+      <input type="text"><br>
+      <p>인원</p>
+      <input type="text"><br>
+      <p>사용 시간 및 수칙을 준수하여 주시기 바랍니다.</p>
+      <input type="button" @click="modalOpen = false" value="예약하기" />
     </div>
-  </header>
-  <nav id="topmenu">
-    <ul>
-      <li><a class="menulink" href="book.html">구장 예약</a></li>
-      <li><a class="menulink" href="match.html">게임 매칭</a></li>
-    </ul>
-  </nav>
+  </div>
   <div class="date">
+    <header>
+      <div class="logo">
+        <img
+          src="https://github.com/osamhack2022/WEB_HOGUGI_MARCH/blob/fff80fe8dd58c3dab4cd8bacaaf0f637c1c69029/HOGUGI_LOGO.png?raw=true"
+          style="width: 200px; display: block; margin: 0 auto"
+        />
+        <h3>영내 체육시설 예약 플랫폼</h3>
+      </div>
+    </header>
+    <nav id="topmenu">
+      <ul>
+        <li><a class="menulink" href="book.html">구장 예약</a></li>
+        <li><a class="menulink" href="match.html">게임 매칭</a></li>
+      </ul>
+    </nav>
     <input type="date" />
   </div>
   <br />
   <button class="yellowbox">예약불가</button>
   <button class="graybox">예약가능</button>
+  <input
+    type="button"
+    @click="modalOpen = true"
+    value="16시"
+  />
   <table class="court-list">
     <form>
       <thead>
@@ -38,13 +54,6 @@
             />
           </td>
           <td>
-            <button>16시</button>
-
-            <div class="black_bg">
-              <div class="white_bg">
-                <p>modal</p>
-              </div>
-            </div>
             <button>17시</button>
             <button class="court-1ist-1-18">18시</button>
             <button class="court-1ist-1-19">19시</button>
@@ -91,7 +100,14 @@ export default {
   props: {
     msg: String,
   },
-};
+  data() {
+    return {
+      modalOpen: false,
+      time: ['16시', '17시', '18시', '19시'],
+    };
+  },
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -186,5 +202,16 @@ h3 {
 
 .black_bg {
   width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  padding: 20px;
+}
+
+.white_bg {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  paddding: 20px;
 }
 </style>
