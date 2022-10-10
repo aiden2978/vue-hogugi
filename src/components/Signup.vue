@@ -1,22 +1,28 @@
 <template>
-  <div id="login-page">
-    <image src = "https://github.com//osamhack2022/WEB_HOGUGI_MARCH/blob/main/HOGUGI_LOGO2.png?raw=true" ></image>
+  <div id="signup-page">
+    <image src = "https://github.com//osamhack2022/WEB_HOGUGI_MARCH/blob/main/HOGUGI_LOGO2.png?raw=true"></image>
     <p>영내 체육시설 예약 플랫폼</p>
-    <div class ="login-interface">
+    <div class ="signup-interface">
       <p>ID</p>
       <input type="text"><br>
       <p>PASSWORD</p>
       <input type="password"><br>
-      <span style="text-align:right;"><a href="" style="text-decoration-line:none;">FORGOT PASSWORD?</a></span><br>
-      <input class="login-btn" type="submit" value="LOGIN" style="padding:20px 111px;"><br>
-      <a href="/Signup.vue">JOIN</a>
+      <p>이름</p>
+      <input type="text"><br>
+      <p>군번</p>
+      <input type="text"><br>
+      <p>소속</p>
+      <input type="text"><br>
+      <p>이메일</p>
+      <input type="email"><br>
+      <input class="signup-btn" type="submit" value="JOIN" style="padding:20px 111px;"><br>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Signup',
   props: {
     msg: String
   }
@@ -26,24 +32,24 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-#login-page {
+#signup-page {
   margin: 10rem auto 10rem;
   text-align: center;
 }
 
-.login-interface{
+.signup-interface{
   padding: 10px;
   margin: auto;
-  height: 300px;
+  height: 650px;
   width: 500px;
   border: 2px solid black;
 }
-.login-interface p{
+.signup-interface p{
   width: 270px;
   margin: auto;
   text-align:left;
 }
-.login-interface input{
+.signup-interface input{
   margin: auto auto 10px auto;
   padding:20px 50px;
 }
