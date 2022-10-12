@@ -5,16 +5,18 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Signin from './components/Signin.vue';
 import Signup from './components/Signup.vue';
 import Book from './components/Book.vue';
+import Match from './components/Match.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Signin,
     Signup,
     Book,
+    Match,
   },
 };
 </script>
