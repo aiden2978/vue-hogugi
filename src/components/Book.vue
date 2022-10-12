@@ -292,7 +292,7 @@ h3 {
   width: 100%;
   background: white;
   border-radius: 8px;
-  paddding: 20px;
+  padding: 20px;
 }
 
 .court {
