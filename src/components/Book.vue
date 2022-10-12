@@ -47,10 +47,11 @@
   <button class="yellowbox">예약불가</button>
   <button class="graybox">예약가능</button>
   <br />
+  <br />
 
   <!-- 예약하기   -->
-  <p style="text-align: center">이용 가능한 시설</p>
-  <div class="court1">
+  <h4 style="text-align: center">이용 가능한 시설</h4>
+  <div class="court">
     <div class="menu">
       <p>A 풋살장</p>
       <img
@@ -90,7 +91,7 @@
     </div>
   </div>
 
-  <div class="court2">
+  <div class="court">
     <div class="menu">
       <p>B 풋살장</p>
       <img
@@ -130,7 +131,7 @@
     </div>
   </div>
 
-  <div class="court3">
+  <div class="court">
     <div class="menu">
       <p>A 농구장</p>
       <img
@@ -264,15 +265,10 @@ h3 {
   text-align: right;
 }
 
-.court-list {
-  width: 80vw;
-  border-spacing: 10px;
-}
-
 .graybox {
   float: right;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 5px;
   pointer-events: none;
 }
 
@@ -280,7 +276,7 @@ h3 {
   float: right;
   background-color: yellow;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 5px;
   pointer-events: none;
 }
 
@@ -297,5 +293,11 @@ h3 {
   background: white;
   border-radius: 8px;
   paddding: 20px;
+}
+
+.court {
+  border: 2px solid;
+  padding: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 </style>
